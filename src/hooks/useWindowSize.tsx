@@ -14,7 +14,7 @@ function off(obj: Window, ...args: [string, () => void]) {
 const useWindowSize = (
   initialWidth = Infinity,
   initialHeight = Infinity,
-): { width: number; height: number } => {
+): { width: number; height: number; isMobile: boolean; isIpad: boolean } => {
   const [state, setState] = useState({
     width: isBrowser ? window.outerWidth : initialWidth,
     height: isBrowser ? window.outerHeight : initialHeight,
@@ -33,6 +33,10 @@ const useWindowSize = (
       };
     }
   }, []);
-  return state;
+  return {
+    ...state,
+    isMobile: state.width < 768,
+    isIpad: state.width < 1024,
+  };
 };
 export default useWindowSize;

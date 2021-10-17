@@ -11,8 +11,13 @@ import PageLoading from '@/components/page-loading';
 // multi language
 import '@/locales/i18n';
 
+import '@/services/axios-base';
+
 // load app SCSS styles
 import '@/styles/App.scss';
+
+// import '@/static/css/style.css';
+import '@/static/fonts/fontawesome-free-5.15.4/css/all.css';
 
 // load Toast styles
 import 'react-toastify/dist/ReactToastify.css';

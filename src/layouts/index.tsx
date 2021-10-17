@@ -1,16 +1,18 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import Header from './header';
-import Footer from './footer';
 import Main from './main';
+import SideBar from './sidebar';
 
 const Layout: React.FC = () => {
   return (
-    <Fragment>
-      <Header />
-      <Main />
-      <Footer />
-    </Fragment>
+    <div className="aldenn container gutter-top">
+      <div className="wrap-sidebar sticky-parent">
+        <SideBar />
+      </div>
+      <div className="wrap-main">
+        <Main />
+      </div>
+    </div>
   );
 };
 

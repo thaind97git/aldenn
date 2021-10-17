@@ -2,10 +2,16 @@ import React from 'react';
 
 const Spinner: React.FC = () => {
   return (
-    <div className="loading-element">
-      <div className="inner one"></div>
-      <div className="inner two"></div>
-      <div className="inner three"></div>
+    <div className="preloader">
+      <div className="preloader__wrap">
+        <div className="circle-pulse">
+          <div className="circle-pulse__1"></div>
+          <div className="circle-pulse__2"></div>
+        </div>
+        <div className="preloader__progress">
+          <span></span>
+        </div>
+      </div>
     </div>
   );
 };
